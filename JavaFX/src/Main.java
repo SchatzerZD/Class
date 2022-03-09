@@ -4,11 +4,33 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
-public class Main {
+
+public class Main extends Application{
 
     public static void main(String[] args) {
-        System.out.println("Hello World");
+       launch(args);
     }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        stage.setTitle("First GUI");
+
+        Button button = new Button();
+        button.setText("yo");
+        button.setPrefSize(100,100);
+
+        StackPane layout = new StackPane();
+        layout.getChildren().add(button);
+
+
+
+        Scene scene = new Scene(layout, 300, 300);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
