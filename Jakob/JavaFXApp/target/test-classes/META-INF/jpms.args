@@ -1,0 +1,4 @@
+--patch-module
+MyFirstJavaFxApp=_
+--add-reads
+MyFirstJavaFxApp=ALL-UNNAMED
