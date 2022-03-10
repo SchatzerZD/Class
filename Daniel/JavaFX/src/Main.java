@@ -8,7 +8,7 @@ import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
 
-public class Main extends Application{
+public class Main extends Application implements EventHandler<ActionEvent>{
 
     public static void main(String[] args) {
        launch(args);
@@ -21,6 +21,7 @@ public class Main extends Application{
         Button button = new Button();
         button.setText("yo");
         button.setPrefSize(100,100);
+        button.setOnAction(this);
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
@@ -33,4 +34,8 @@ public class Main extends Application{
         stage.show();
     }
 
+    @Override
+    public void handle(ActionEvent actionEvent) {
+
+    }
 }
