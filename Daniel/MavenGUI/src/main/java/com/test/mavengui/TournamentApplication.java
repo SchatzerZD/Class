@@ -48,12 +48,10 @@ public class TournamentApplication extends Application {
         button.setLayoutY(600);
         button.setText("[->");
 
-        /*
         button.setOnAction(e ->{
             LoginMenu loginMenu = new LoginMenu();
-            stage.getScene().setRoot();
+            stage.setScene(loginMenu.getScene());
         });
-        **/
 
         Rectangle blackOutline = new Rectangle(posX1,posY1,posX2,posY2);
         Rectangle whitePadding = new Rectangle(posX1+outLineSize,posY1+outLineSize,posX2-outLineSize,posY2-outLineSize);
