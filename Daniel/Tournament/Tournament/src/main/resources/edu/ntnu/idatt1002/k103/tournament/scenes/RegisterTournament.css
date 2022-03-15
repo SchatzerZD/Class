@@ -1,23 +1,39 @@
 
+
 #layout{
     -fx-vgap: 17px;
     -fx-hgap: 25px;
     -fx-font-size: 25px;
-    -fx-alignment: top-center;
+    -fx-alignment: center;
     -fx-border-color: black;
     -fx-border-width: 5px;
     -fx-font-weight: bold;
-    -fx-padding: 15px;
 }
 
 #topScreen{
-    -fx-spacing: 250px;
+    -fx-spacing: 200px;
     -fx-border-color: black;
     -fx-border-width: 4px;
     -fx-padding: 5px;
     -fx-font-weight: bold;
     -fx-alignment: center;
 }
+
+#checkBoxList{
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-spacing: 2px;
+    -fx-padding: 5px;
+}
+
+#radioButtonsBox{
+    -fx-spacing: 5px;
+}
+
+#bottomRight{
+    -fx-spacing: 200px;
+}
+
 
 #returnButton{
     -fx-background-color: red;
@@ -30,8 +46,4 @@
 #returnButton:hover{
     -fx-background-color: blue;
     -fx-cursor: hand;
-}
-
-#layoutSpacer{
-    -fx-min-height: 50px;
 }
