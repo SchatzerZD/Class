@@ -1,0 +1,53 @@
+
+
+.inputLabels{
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+
+.text-field{
+    -fx-min-width: 200;
+}
+
+
+.hbox{
+    -fx-spacing: 100px;
+}
+
+.menu-button{
+    -fx-font-size: 15px;
+    -fx-max-height: 15px;
+}
+
+#vbox{
+    -fx-padding: 100px;
+    -fx-spacing: 30px;
+    -fx-border-color: black;
+    -fx-border-width: 5px;
+}
+
+#returnButton{
+    -fx-background-color: red;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+}
+
+#returnButton:hover{
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+#topScreen{
+    -fx-spacing: 600px;
+    -fx-border-color: black;
+    -fx-border-width: 5px;
+}
+
+#title{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,27 @@
+.label{
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+}
+
+.hbox{
+
+}
+
+.vbox{
+    -fx-padding: 40px;
+    -fx-spacing: 15px;
+}
+
+.button{
+    -fx-font-size: 20px;
+    -fx-padding: 5px;
+    -fx-border-width: 5px;
+    -fx-border-color: black;
+    -fx-min-width: 250px;
+}
+
+.button:hover{
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
