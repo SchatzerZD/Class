@@ -15,7 +15,7 @@ public class RegisterTournament {
 
     public RegisterTournament(Stage stage){
 
-        String[] teamList = new String[]{"Team One","Team Two","Team Three","Team Four","Team Five","Team Six"};
+        String[] teamList = new String[]{"Team One","Team Two","Team Three","Team Four","Team Five","Team Six","Team Seven"};
 
         Label title = new Label("Register Tournament");
         Label tournamentName = new Label("Tournament Name");
