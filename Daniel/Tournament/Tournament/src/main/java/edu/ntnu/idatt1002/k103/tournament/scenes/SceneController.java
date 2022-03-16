@@ -33,7 +33,8 @@ public class SceneController {
                 break;
 
             case EDIT_PLAYER:
-                //TODO: Add class
+                EditPlayer editPlayer = new EditPlayer(stage);
+                stage.setScene(editPlayer.getScene());
                 break;
 
             case EDIT_TOURNAMENT:

@@ -1,7 +1,6 @@
 package edu.ntnu.idatt1002.k103.tournament;
 
 import edu.ntnu.idatt1002.k103.tournament.scenes.AdminMenu;
-import edu.ntnu.idatt1002.k103.tournament.scenes.LoginMenu;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

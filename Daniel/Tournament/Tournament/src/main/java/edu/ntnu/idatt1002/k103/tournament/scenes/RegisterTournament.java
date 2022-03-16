@@ -15,7 +15,9 @@ public class RegisterTournament {
 
     public RegisterTournament(Stage stage){
 
-        String[] teamList = new String[]{"Team One","Team Two","Team Three","Team Four","Team Five","Team Six","Team Seven"};
+        String[] teamList = new String[]
+                        {"Team One","Team Two","Team Three",
+                        "Team Four","Team Five","Team Six","Team Seven"};
 
         Label title = new Label("Register Tournament");
         Label tournamentName = new Label("Tournament Name");
@@ -80,9 +82,6 @@ public class RegisterTournament {
         bottomRight.setId("bottomRight");
         returnButton.setId("returnButton");
 
-        StackPane stackPane = new StackPane(layout);
-        stackPane.setAlignment(Pos.CENTER);
-
 
         returnButton.setOnAction(e ->{
             SceneController sceneController = new SceneController(stage);
@@ -90,7 +89,7 @@ public class RegisterTournament {
         });
 
 
-        scene = new Scene(stackPane, WIDTH, HEIGHT);
+        scene = new Scene(layout, WIDTH, HEIGHT);
         scene.getStylesheets().add(getClass().getResource("RegisterTournament.css").toExternalForm());
     }
 

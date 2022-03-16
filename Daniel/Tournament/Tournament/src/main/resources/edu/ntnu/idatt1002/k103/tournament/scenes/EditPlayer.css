@@ -1,0 +1,54 @@
+
+#topScreen{
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+#topScreenSpacer{
+    -fx-min-width: 550px;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: always;
+}
+
+.gridPane{
+    -fx-vgap: 17px;
+    -fx-hgap: 25px;
+}
+
+#layoutSpacer{
+    -fx-min-height: 50px;
+}
+
+#layout{
+    -fx-font-size: 25px;
+    -fx-alignment: center;
+    -fx-border-color: black;
+    -fx-border-width: 5px;
+    -fx-font-weight: bold;
+}
+
+#returnButton{
+    -fx-background-color: red;
+    -fx-border-width: 4px;
+    -fx-border-color: black;
+    -fx-font-size: 25px;
+    -fx-text-fill: white;
+}
+
+#returnButton:hover{
+    -fx-background-color: blue;
+    -fx-cursor: hand;
+}
+
+#bottomRight{
+    -fx-spacing: 50px;
+}
+
+#selectedTeamGrid{
+    -fx-border-color: black;
+    -fx-border-width: 5px;
+    -fx-padding: 8px;
+}

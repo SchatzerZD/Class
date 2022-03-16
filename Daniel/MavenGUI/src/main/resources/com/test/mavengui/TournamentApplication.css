@@ -1,35 +1,12 @@
-#mainTitle{
-    -fx-font-size: 50px;
-    -fx-padding: 50px;
-}
 
-#subTitle{
-    -fx-padding: 260px;
-}
-
-.label {
-    -fx-font-weight: bold;
-    -fx-font-size: 25px;
-}
 
 #layout{
-    -fx-position: fixed;
+    -fx-spacing: 25px;
 }
 
-#subText{
-    -fx-font-size: 20px;
-}
-
-.button{
+.label{
+    -fx-spacing: 100px;
     -fx-font-size: 50px;
-    -fx-padding: 20px;
-    -fx-border-width: 5px;
+    -fx-padding: 50px;
     -fx-border-color: black;
-    -fx-background-color: red;
-    -fx-text-fill: white;
-}
-
-.button:hover{
-    -fx-background-color: blue;
-    -fx-cursor: hand;
 }
