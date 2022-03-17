@@ -24,10 +24,11 @@
 
 #layout{
     -fx-font-size: 25px;
-    -fx-alignment: center;
+    -fx-alignment: top-center;
     -fx-border-color: black;
     -fx-border-width: 5px;
     -fx-font-weight: bold;
+    -fx-padding: 10px;
 }
 
 #returnButton{

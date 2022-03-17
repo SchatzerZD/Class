@@ -1,27 +1,29 @@
 package edu.ntnu.idatt1002.k103.tournament.scenes;
 
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-
-import javafx.scene.control.cell.CheckBoxListCell;
-import javafx.scene.layout.*;
-
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-
-public class RegisterTournament {
+public class EditTournament {
     private int WIDTH = 800;
     private int HEIGHT = 800;
     private Scene scene;
 
+    public EditTournament(Stage stage){
 
-    public RegisterTournament(Stage stage){
+        ObservableList<String> tournaments = FXCollections.observableArrayList(
+                "Tournament One", "Tournament Two", "Tournament Three"
+        );
+
+        ListView<String> tournamentList = new ListView<>(tournaments);
 
 
         ArrayList<String> playerNameList = new ArrayList<>();
@@ -30,12 +32,22 @@ public class RegisterTournament {
             playerNameList.add("Player " + (i+1));
         }
 
-        ObservableList<CheckBox> players = FXCollections.observableArrayList();
-        for (var i=0;i< playerNameList.size();i++){
-            players.add(new CheckBox(playerNameList.get(i)));
+
+        ObservableList<HBox> deleteCells = FXCollections.observableArrayList();
+
+        for (var i=0;i<playerNameList.size();i++){
+            Button delButton = new Button("X");
+            HBox delCellBox = new HBox(delButton,new Label(playerNameList.get(i)));
+            deleteCells.add(delCellBox);
+
+            delButton.setOnAction(e -> {
+                deleteCells.remove(delCellBox);
+
+            });
         }
 
-        ListView<CheckBox> playerList = new ListView<>(players);
+        ListView<HBox> playerList = new ListView<>(deleteCells);
+
 
 
 
@@ -43,10 +55,13 @@ public class RegisterTournament {
         Label title = new Label("Register Tournament");
         Label tournamentName = new Label("Tournament Name");
         Label brackets = new Label("Brackets");
-        Label selectDate = new Label("Select Date:");
+        Label selectDate = new Label("Change Date:");
+        Label currentSelected = new Label();
+
 
         Button returnButton = new Button("X");
-        Button createTournament = new Button("Create Tournament");
+        Button createTournament = new Button("Apply Changes");
+
 
         Slider bracketSlider = new Slider(2,5,2);
         bracketSlider.setShowTickMarks(true);
@@ -72,7 +87,6 @@ public class RegisterTournament {
         Pane topScreenSpacer = new Pane();
         Pane bottomRightSpacer = new Pane();
 
-        VBox checkBoxList = new VBox(playerList);
         VBox tournamentNameBox = new VBox(tournamentName,tournamentNameInput);
         VBox bracketSliderBox = new VBox(brackets,bracketSlider);
         VBox dateBox = new VBox(selectDate,calendar);
@@ -80,29 +94,29 @@ public class RegisterTournament {
         HBox topScreen = new HBox(title,topScreenSpacer,returnButton);
         HBox bottomRight = new HBox(bottomRightSpacer,createTournament);
 
-        /*
-        for(var i=0;i<teamList.length;i++){
-            CheckBox checkBox = new CheckBox(teamList[i]);
-            checkBoxList.getChildren().add(checkBox);
-        }
-        **/
+
+
+        GridPane tournamnetGrid = new GridPane();
+        tournamnetGrid.add(tournamentNameBox,0,1,2,1);
+        tournamnetGrid.add(currentSelected,0,0,2,1);
+        tournamnetGrid.add(bracketSliderBox,0,2,1,1);
+        tournamnetGrid.add(radioButtonsBox,0,3,1,1);
+        tournamnetGrid.add(playerList,0,4,1,3);
+        tournamnetGrid.add(dateBox,1,2,1,1);
+        tournamnetGrid.add(bottomRight,1,7,1,1);
+
 
         GridPane layout = new GridPane();
         layout.add(topScreen,0,0,2,1);
-        layout.add(tournamentNameBox,0,1,2,1);
-        layout.add(bracketSliderBox,0,2,1,1);
-        layout.add(radioButtonsBox,0,3,1,1);
-        layout.add(checkBoxList,0,4,1,3);
-        layout.add(dateBox,1,2,1,1);
-        layout.add(bottomRight,1,7,1,1);
-
+        layout.add(tournamentList,0,1,1,7);
+        layout.add(tournamnetGrid,1,1,1,6);
 
         topScreen.setId("topScreen");
         layout.setId("layout");
-        checkBoxList.setId("checkBoxList");
         radioButtonsBox.setId("radioButtonsBox");
         bottomRight.setId("bottomRight");
         returnButton.setId("returnButton");
+        playerList.setId("playerList");
 
 
         returnButton.setOnAction(e ->{
@@ -110,11 +124,14 @@ public class RegisterTournament {
             sceneController.switchScene(9);
         });
 
+        tournamentList.getSelectionModel().selectedItemProperty().addListener((observableValue, s, t1) -> {
+            currentSelected.setText(t1);
+        });
+
 
         scene = new Scene(layout, WIDTH, HEIGHT);
-        scene.getStylesheets().add(getClass().getResource("RegisterTournament.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("EditTournament.css").toExternalForm());
     }
-
 
     public int getWIDTH() {
         return WIDTH;
@@ -135,4 +152,5 @@ public class RegisterTournament {
     public Scene getScene() {
         return scene;
     }
+
 }

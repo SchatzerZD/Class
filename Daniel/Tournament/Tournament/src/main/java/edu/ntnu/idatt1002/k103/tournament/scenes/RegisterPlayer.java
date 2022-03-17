@@ -25,7 +25,6 @@ public class RegisterPlayer {
         TextField lastNameInput = new TextField();
         TextField emailInput = new TextField();
 
-        MenuButton teamsDropDown = new MenuButton("Teams");
 
         Button returnButton = new Button("X");
         Button register = new Button("Register");
@@ -43,7 +42,6 @@ public class RegisterPlayer {
         layout.add(layoutSpacer,0,1,1,1);
         layout.add(firstNameBox,0,2,1,1);
         layout.add(emailBox,0,3,2,1);
-        layout.add(teamsDropDown,0,4,1,2);
         layout.add(lastNameBox,1,2,1,1);
         layout.add(register,1,5,1,1);
 

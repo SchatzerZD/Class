@@ -1,7 +1,5 @@
 package edu.ntnu.idatt1002.k103.tournament.scenes;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
@@ -10,7 +8,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class EditPlayer {
@@ -21,15 +18,9 @@ public class EditPlayer {
 
     public EditPlayer(Stage stage){
 
-        ObservableList<String> teams = FXCollections.observableArrayList(
-                "Team One","Team Two","Team Three",
-                "Team Four","Team Five","Team Six","Team Seven","Team One","Team Two","Team Three",
-                "Team Four","Team Five","Team Six","Team Seven","Team One","Team Two","Team Three",
-                "Team Four","Team Five","Team Six","Team Seven");
         ObservableList<String> players = FXCollections.observableArrayList(
                 "Player One","Player Two","Player Three");
 
-        ListView<String> teamList = new ListView<>(teams);
         ListView<String> playerList = new ListView<>(players);
 
 
@@ -57,7 +48,6 @@ public class EditPlayer {
 
         GridPane selectedTeamGrid = new GridPane();
         selectedTeamGrid.add(currentSelected,0,0,2,1);
-        selectedTeamGrid.add(playerList,0,1,1,4);
         selectedTeamGrid.add(inputFieldsBox,1,1,1,3);
         selectedTeamGrid.add(bottomRight,1,4,1,1);
         selectedTeamGrid.getStyleClass().add("gridPane");
@@ -67,7 +57,7 @@ public class EditPlayer {
         GridPane layout = new GridPane();
         layout.add(topScreen,0,0,2,1);
         layout.add(layoutSpacer,0,1,2,1);
-        layout.add(teamList,0,2,1,6);
+        layout.add(playerList,0,2,1,6);
         layout.add(selectedTeamGrid,1,2,1,6);
         layout.getStyleClass().add("gridPane");
 
@@ -85,7 +75,7 @@ public class EditPlayer {
         });
 
 
-        teamList.getSelectionModel().selectedItemProperty().addListener((observableValue, s, t1) -> {
+        playerList.getSelectionModel().selectedItemProperty().addListener((observableValue, s, t1) -> {
             currentSelected.setText(t1);
         });
 

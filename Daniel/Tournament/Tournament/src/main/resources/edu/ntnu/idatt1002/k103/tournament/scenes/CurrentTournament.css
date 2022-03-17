@@ -1,10 +1,24 @@
 
 
-#layout{
-    -fx-vgap: 17px;
-    -fx-hgap: 25px;
-    -fx-font-size: 25px;
+.tournamentRow{
     -fx-alignment: center;
+    -fx-spacing: 50;
+}
+
+.bracketRectangle{
+    -fx-fill: white;
+    -fx-stroke: black;
+    -fx-stroke-width: 5px;
+}
+
+#vbox{
+    -fx-alignment: center;
+    -fx-spacing: 50;
+}
+
+#layout{
+    -fx-font-size: 25px;
+    -fx-alignment: top-center;
     -fx-border-color: black;
     -fx-border-width: 5px;
     -fx-font-weight: bold;
@@ -12,7 +26,6 @@
 }
 
 #topScreen{
-    -fx-spacing: 200px;
     -fx-border-color: black;
     -fx-border-width: 4px;
     -fx-padding: 5px;
@@ -20,21 +33,16 @@
     -fx-alignment: center;
 }
 
-#checkBoxList{
-    -fx-border-color: black;
-    -fx-border-width: 3px;
-    -fx-spacing: 2px;
-    -fx-padding: 5px;
+#topScreenSpacer{
+    -fx-min-width: 350px;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: always;
 }
 
-#radioButtonsBox{
-    -fx-spacing: 5px;
+#layoutSpacer{
+    -fx-min-height: 250px;
+    -fx-padding: 50px;
 }
-
-#bottomRight{
-    -fx-spacing: 200px;
-}
-
 
 #returnButton{
     -fx-background-color: red;
@@ -47,4 +55,8 @@
 #returnButton:hover{
     -fx-background-color: blue;
     -fx-cursor: hand;
+}
+
+.label{
+    -fx-alignment: center;
 }

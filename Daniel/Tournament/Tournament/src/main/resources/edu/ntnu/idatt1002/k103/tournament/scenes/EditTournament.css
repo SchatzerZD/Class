@@ -32,7 +32,7 @@
 }
 
 #bottomRight{
-    -fx-spacing: 200px;
+    -fx-spacing: 100px;
 }
 
 
@@ -47,4 +47,9 @@
 #returnButton:hover{
     -fx-background-color: blue;
     -fx-cursor: hand;
+}
+
+
+.list-view{
+    -fx-font-size: 18px;
 }

@@ -29,7 +29,8 @@ public class SceneController {
                 break;
 
             case CURRENT_TOURNAMENT:
-                //TODO: Add class
+                CurrentTournament currentTournament = new CurrentTournament(stage);
+                stage.setScene(currentTournament.getScene());
                 break;
 
             case EDIT_PLAYER:
@@ -38,7 +39,8 @@ public class SceneController {
                 break;
 
             case EDIT_TOURNAMENT:
-                //TODO: Add class
+                EditTournament editTournament = new EditTournament(stage);
+                stage.setScene(editTournament.getScene());
                 break;
 
             case STATISTICS:
