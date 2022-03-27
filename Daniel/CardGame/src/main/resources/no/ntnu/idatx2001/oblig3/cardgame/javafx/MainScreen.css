@@ -35,4 +35,5 @@
     -fx-border-color: black;
     -fx-border-width: 3px;
     -fx-min-width: 150px;
+    -fx-padding: 3px;
 }
