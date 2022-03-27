@@ -72,7 +72,6 @@ public class MainScreen extends Application {
         });
 
 
-
         layout.setId("layout");
         cardDisplay.setId("cardDisplay");
         rightSideBox.setId("rightSideBox");
@@ -164,6 +163,6 @@ public class MainScreen extends Application {
 
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }

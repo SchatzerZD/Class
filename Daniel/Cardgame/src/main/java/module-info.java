@@ -5,4 +5,6 @@ module no.ntnu.idatx2001.oblig3.cardgame {
 
     opens no.ntnu.idatx2001.oblig3.cardgame to javafx.fxml;
     exports no.ntnu.idatx2001.oblig3.cardgame;
+    opens no.ntnu.idatx2001.oblig3.cardgame.javafx to javafx.fxml;
+    exports no.ntnu.idatx2001.oblig3.cardgame.javafx;
 }
