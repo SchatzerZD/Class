@@ -1,0 +1,38 @@
+
+#layout{
+    -fx-vgap: 20px;
+    -fx-hgap: 20px;
+    -fx-alignment: center;
+}
+
+#cardDisplay{
+    -fx-min-width: 700;
+    -fx-min-height: 200;
+    -fx-spacing: 10px;
+    -fx-border-color: black;
+    -fx-border-width: 5px;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+#rightSideBox{
+    -fx-font-size: 15px;
+    -fx-spacing: 20px;
+}
+
+#rightSideBox .button{
+    -fx-min-width: 100px;
+}
+
+.info{
+    -fx-min-width: 300px;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-spacing: 7px;
+}
+
+.infoShow{
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-min-width: 150px;
+}
