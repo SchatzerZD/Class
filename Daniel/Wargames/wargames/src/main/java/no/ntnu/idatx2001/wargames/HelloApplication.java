@@ -1,4 +1,4 @@
-package no.ntnu.idatx2001.oblig3.cardgame;
+package no.ntnu.idatx2001.wargames;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

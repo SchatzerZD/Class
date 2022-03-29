@@ -1,4 +1,4 @@
-package no.ntnu.idatx2001.oblig3.cardgame;
+package no.ntnu.idatx2001.wargames;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
